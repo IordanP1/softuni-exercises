@@ -1,0 +1,268 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap);
+body{
+    font-family: 'Poppins';
+}
+.first-header{
+    display: flex;
+    justify-content: center;
+}
+.first-header span{
+    padding-top: 20px;
+    padding-left: 4px;
+}
+.first-header p{
+        border-right: 1px solid white;
+        padding: 5px;
+
+}
+.emoji-header{
+    
+    
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: -50px;
+    gap: 10px;
+    
+}
+header {
+    background-color: black;
+    color: white;           
+    padding: 10px 0 ;        
+    
+}
+.second-header ul{
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    position: relative;
+    top: -28px;
+    color: black;
+    background-color: white;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 30px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+    
+    
+}
+.orange{
+color: orange;
+padding-left: 10px;
+font-weight: bold;
+}
+.bold-black{
+    font-weight: bold;
+    padding-right: 10px;
+}
+.about li{
+    padding: 10px;
+}
+.body-photo {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/03-Vintage-Cuts/images/carousel-1.jpg');
+    
+    background-size: cover;       
+    background-position: center;  
+    height: 80vh;                 
+    display: flex;                
+    align-items: center;         
+    justify-content: center;      
+    text-align: center;
+    color: white;        
+    position: relative;
+   top: -58px;
+   flex-direction: column;
+   
+}
+.body-text h1{
+   line-height: 0.8;
+   
+}
+.body-text h3{
+    line-height: 0.5;
+}
+.body-text button{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-family: inherit;
+    padding: 10px
+}
+.body-photo{
+    border-bottom: 10px solid grey;
+}
+.aboutUs-Container h2{
+    text-align: center;
+}
+
+ .left-part, .middle-part, .right-part {
+    flex: 1;             
+}
+.middle-part img {
+    width: 100%;           
+    height: auto;
+}
+.second-body h2{
+    display: flex;
+    justify-content: center;
+}
+.left-part{
+    
+    display: flex;
+    flex-direction: column;
+}
+.left-part h4{
+    text-align: center;
+}
+.left-part button{
+    padding: 5px;
+    width: 90px;
+    border-radius: 30px;
+    background-color: orange;
+    color: white;
+    border: none;
+    width: 80px;
+    height: 30px;
+
+}
+.left-part p{
+    font-weight: lighter;
+    
+}
+.middle-part{
+    width: 30%;
+   
+}
+.right-part{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.right-part h5{
+font-weight: 400;
+line-height: 0.4px;
+
+}
+.right-part h4{
+    line-height: 0.4px;
+}
+.right-part i{
+    color: orange;
+   
+}
+.right-part button{
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    width: 90px;
+    height: 30px;
+}
+.right-part p{
+    line-height: 1.5em;
+}
+.heading{
+    text-align: left;
+}
+
+.heading h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+.second-body {
+    background-color: #d8f3dc;
+    padding: 50px 0;
+    text-align: center;
+}
+.main-ctr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.left-part { text-align: left; }
+.right-part { text-align: left; }
+
+.footer-ctr {
+    text-align: center;
+    padding: 50px 0;
+    font-family: 'Poppins', sans-serif;
+}
+.footer-ctr .orange{
+    color: orange;
+}
+.logo {
+    display: flex;
+    justify-content: center;
+    gap: 0; 
+}
+.logo h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+.footer-ctr .social a{
+    border: 1px solid blue;
+    color: orange;
+    border-radius: 80%;
+    padding: 10px;
+}
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #add8e6; /* Светло синьо */
+    border-radius: 50%;
+    color: #e67e22; /* Оранжев цвят за иконата */
+    text-decoration: none;
+    transition: 0.3s;
+}
+.in-tuch{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid black;
+   
+}
+.last-one {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+.in-touch, .opening-hours {
+    text-align: right; 
+}
+.opening-hours{
+    text-align: left;
+}
+.in-touch {
+    border-right: 2px solid #ccc; 
+    padding-right: 40px;
+}
+.copyright {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 20px;
+}
+
+
+
+
+
