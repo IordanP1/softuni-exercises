@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css2?family=Margarine&display=swap);
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Margarine';
+    background-color: rgb(224, 212, 197);
+}
+.all{
+    display: flex;
+    max-width: 1200px;  
+    margin: 50px auto; 
+    gap: 20px;     
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    
+}
+
+.left{
+    border: 1px solid black;
+    width: 40%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+    
+}
+.left h2{
+    padding: 1em;
+}
+.right{
+    border: 1px solid black;
+    width: 60%;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+}
+.progress-fill{
+    width: 100%;
+    background-color: #3189f4;
+    border-radius: 13px;
+    height: 18px;
+    margin-bottom: 5px;
+   
+}
+.top-span{
+    border-bottom: 1px solid rgb(83, 82, 82);
+}
+.top-span p{
+    padding: 5px;
+
+}
+.top-span p i{
+    padding-right: 15px ;
+}
+.skills p{
+    padding: 10px;
+}
+.progress-fill.first  { width: 90%; }
+.progress-fill.second { width: 80%; }
+.progress-fill.third  { width: 75%; }
+.progress-fill.fourth { width: 50%; }
+.top-span i{
+    color: #3189f4;
+}
+.right h2{
+    text-align: center;
+    padding: 20px;
+}
+.right h3{
+    padding: 10px;
+    font-weight: 300;
+    color: lightslategray;
+}
+.right p.period {
+    color: #3189f4;
+    padding-bottom: 20px;
+}
+.right div{
+    border-bottom: 1px solid black;
+    padding-left: 10px;
+}
+.right p{
+    padding-left: 10px;
+}
