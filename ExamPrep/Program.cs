@@ -1,127 +1,64 @@
-﻿namespace The_Squirrel
+﻿/*
+10 15 12 18 22 6
+12 16 5 6 9 1
+ */
+
+namespace RubberDuckDebuggersPt2
 {
     internal class Program
     {
-        const char Squirrel = 's';
-        const char Hazelnut = 'h';
-        const char Empty = '*';
-        const char Trap = 't';
-
         static void Main(string[] args)
         {
-            int n = int.Parse(Console.ReadLine());
-            Queue<string> commands = new Queue<string>(Console.ReadLine().Split(", ", StringSplitOptions.RemoveEmptyEntries));
 
-            char[,] matrix = new char[n,n];
+            Queue<int> programmerTime = new Queue<int>(Console.ReadLine()
+               .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+               .Select(int.Parse));
 
-            
-            for (int i = 0; i < n; i++)
+            Stack<int> numTask = new Stack<int>(Console.ReadLine()
+                .Split(" ", StringSplitOptions.RemoveEmptyEntries)
+                .Select(int.Parse));
+
+            int dartVeidarDucky = 0;
+            int thorDucy = 0;
+            int bigBlueRubberDucky = 0;
+            int smallYellowRubberDucky = 0;
+
+            while (programmerTime.Count>0&&numTask.Count>0)
             {
-                string line = Console.ReadLine();
+                int programmerNum = programmerTime.Dequeue();
+                int numNumber = numTask.Pop();
 
-                for (int j = 0; j < n; j++)
+                int totalTime = programmerNum * numNumber;
+
+                if (totalTime <= 60)
                 {
-                    matrix[i, j] = line[j];
+                    dartVeidarDucky++;
                 }
-            }
-            int SquirelRow = -1;
-            int squirelCol = -1;
-
-
-
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < n; j++)
+                else if (totalTime > 61 && totalTime <= 120)
                 {
-                    if (matrix[i, j] == Squirrel)
-                    {
-                        SquirelRow = i;
-                        squirelCol = j;
-        
-                        break;
-                    }
+                    thorDucy++;
                 }
-            }
-
-            int hazelnutCount = 0;
-            bool Exited = false;
-            //left, right, up, down //moga da gi vzema s Queue zashtoto vzima purviq i go maha i chete natam
-            int commandIndex = 0;
-            while (hazelnutCount < 3 && !Exited && commands.Count > 0) 
-            {
-                string command = commands.Dequeue();
+                else if (totalTime > 121 && totalTime <= 180)
+                {
+                    bigBlueRubberDucky++;
+                }
+                else if (totalTime > 181 && totalTime <= 240)
+                {
+                    smallYellowRubberDucky++;
+                }
+                else if (totalTime > 240)
+                {
+                    programmerTime.Enqueue(programmerNum);
+                    numTask.Push(numNumber - 2);
+                }
                
-
-
-                int newRow = SquirelRow;
-                int newCol = squirelCol;
-
-
-                if (command == "left")
-                {
-                    newCol--;
-                }
-                else if (command == "right")
-                {
-                    newCol++;
-                }
-                else if (command == "up")
-                {
-                    newRow--;
-                }
-                else if (command == "down")
-                {
-                    newRow++;
-                }
-
-                if (newRow < 0 || newRow >= n || newCol < 0 || newCol >= n) 
-                {
-                    Console.WriteLine("The squirrel is out of the field.");
-                    Exited = true;
-                    break;
-                }
-
-                char nextCell = matrix[newRow, newCol];
-                if (nextCell==Trap)
-                {
-                    Console.WriteLine("Unfortunately, the squirrel stepped on a trap...");
-                    Exited=true;
-                    break;
-                }
-
-                if (nextCell==Hazelnut)
-                {
-                    hazelnutCount++;
-                    matrix[newRow, newCol] = Empty;
-                }
-
-                if (hazelnutCount == 3) 
-                {
-                    Console.WriteLine("Good job! You have collected all hazelnuts!");
-                    break;
-                }
-
-                matrix[SquirelRow, squirelCol] = Empty;
-                SquirelRow = newRow;
-                squirelCol = newCol;
-                matrix[SquirelRow, squirelCol] = Squirrel;
             }
-            if (!Exited && hazelnutCount < 3) 
-            {
-                Console.WriteLine("There are more hazelnuts to collect.");
+            Console.WriteLine("Congratulations, all tasks have been completed! Rubber ducks rewarded:");
+            Console.WriteLine($"Darth Vader Ducky: {dartVeidarDucky}");
+            Console.WriteLine($"Thor Ducky: {thorDucy}");
+            Console.WriteLine($"Big Blue Rubber Ducky: {bigBlueRubberDucky}");
+            Console.WriteLine($"Small Yellow Rubber Ducky: {smallYellowRubberDucky}");
 
-            }
-            Console.WriteLine($"Hazelnuts collected: {hazelnutCount}");
-           
         }
     }
 }
-/*
-5
-left, left, up, right, up, up
-**h**
-t****
-*h***
-*h*s*
-*****
- */
